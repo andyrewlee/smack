@@ -1,0 +1,13 @@
+<h1>Smack</h1>
+<%= form_for :session, url: sessions_path do |f| %>
+  <p>
+    <%= f.label :username, 'Username' %>
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password, 'Password' %>
+    <%= f.password_field :password %>
+  </p>
+  <%= f.submit 'Log In' %>
+<% end %>
+<%= link_to "Registration", new_user_path %>
