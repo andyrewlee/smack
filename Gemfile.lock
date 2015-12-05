@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/rack/rack.git
+  revision: c393176b0edf3e5d06cabbb6eb9d9c7a07b2afa7
+  specs:
+    rack (2.0.0.alpha)
+      json
+
+GIT
   remote: git://github.com/rails/actioncable.git
   revision: 928aed6e2abc6405c6276530df07b4ac3bc9664b
   specs:
@@ -12,55 +19,105 @@ GIT
       redis (~> 3.0)
       websocket-driver (~> 0.6.1)
 
-GEM
-  remote: https://rubygems.org/
+GIT
+  remote: git://github.com/rails/arel.git
+  revision: 3c429c5d86e9e2201c2a35d934ca6a8911c18e69
   specs:
-    actionmailer (4.2.5)
-      actionpack (= 4.2.5)
-      actionview (= 4.2.5)
-      activejob (= 4.2.5)
+    arel (7.0.0.alpha)
+
+GIT
+  remote: git://github.com/rails/coffee-rails.git
+  revision: c05fb725613d96ce969c30a11e7b613e90f9e5e8
+  specs:
+    coffee-rails (4.1.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+
+GIT
+  remote: git://github.com/rails/rails.git
+  revision: 0d8b3c2e7fba5f1d35c3cbc09797311a0be1b480
+  specs:
+    actionmailer (5.0.0.alpha)
+      actionpack (= 5.0.0.alpha)
+      actionview (= 5.0.0.alpha)
+      activejob (= 5.0.0.alpha)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (4.2.5)
-      actionview (= 4.2.5)
-      activesupport (= 4.2.5)
-      rack (~> 1.6)
-      rack-test (~> 0.6.2)
+    actionpack (5.0.0.alpha)
+      actionview (= 5.0.0.alpha)
+      activesupport (= 5.0.0.alpha)
+      rack (~> 2.x)
+      rack-test (~> 0.6.3)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.5)
-      activesupport (= 4.2.5)
+    actionview (5.0.0.alpha)
+      activesupport (= 5.0.0.alpha)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    activejob (4.2.5)
-      activesupport (= 4.2.5)
+    activejob (5.0.0.alpha)
+      activesupport (= 5.0.0.alpha)
       globalid (>= 0.3.0)
-    activemodel (4.2.5)
-      activesupport (= 4.2.5)
+    activemodel (5.0.0.alpha)
+      activesupport (= 5.0.0.alpha)
       builder (~> 3.1)
-    activerecord (4.2.5)
-      activemodel (= 4.2.5)
-      activesupport (= 4.2.5)
-      arel (~> 6.0)
-    activesupport (4.2.5)
+    activerecord (5.0.0.alpha)
+      activemodel (= 5.0.0.alpha)
+      activesupport (= 5.0.0.alpha)
+      arel (= 7.0.0.alpha)
+    activesupport (5.0.0.alpha)
+      concurrent-ruby (~> 1.0)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
+      method_source
       minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    arel (6.0.3)
+    rails (5.0.0.alpha)
+      actionmailer (= 5.0.0.alpha)
+      actionpack (= 5.0.0.alpha)
+      actionview (= 5.0.0.alpha)
+      activejob (= 5.0.0.alpha)
+      activemodel (= 5.0.0.alpha)
+      activerecord (= 5.0.0.alpha)
+      activesupport (= 5.0.0.alpha)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 5.0.0.alpha)
+      sprockets-rails (>= 2.0.0)
+    railties (5.0.0.alpha)
+      actionpack (= 5.0.0.alpha)
+      activesupport (= 5.0.0.alpha)
+      method_source
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+
+GIT
+  remote: git://github.com/rails/sprockets-rails.git
+  revision: 06d84e952490d7d391592124f6e3b79f9c596674
+  specs:
+    sprockets-rails (3.0.0.beta3)
+      actionpack (>= 4.0)
+      activesupport (>= 4.0)
+      sprockets (>= 3.0.0)
+
+GIT
+  remote: git://github.com/rails/web-console.git
+  revision: 8be86dae446df1431333ecd6f5c4cdf5d3c1467f
+  specs:
+    web-console (3.0.0)
+      activemodel (>= 4.0)
+      debug_inspector
+      railties (>= 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
     bcrypt (3.1.10)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.1)
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    coffee-rails (4.1.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -93,6 +150,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
@@ -101,20 +159,8 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
     puma (2.15.3)
-    rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (4.2.5)
-      actionmailer (= 4.2.5)
-      actionpack (= 4.2.5)
-      actionview (= 4.2.5)
-      activejob (= 4.2.5)
-      activemodel (= 4.2.5)
-      activerecord (= 4.2.5)
-      activesupport (= 4.2.5)
-      bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.5)
-      sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -123,11 +169,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
-    railties (4.2.5)
-      actionpack (= 4.2.5)
-      activesupport (= 4.2.5)
-      rake (>= 0.8.7)
-      thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
     redis (3.2.2)
@@ -142,13 +183,9 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     spring (1.5.0)
-    sprockets (3.5.0)
+    sprockets (3.5.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (2.3.3)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      sprockets (>= 2.8, < 4.0)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
@@ -161,11 +198,6 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    web-console (2.2.1)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -175,20 +207,23 @@ PLATFORMS
 
 DEPENDENCIES
   actioncable!
+  arel!
   bcrypt (~> 3.1.7)
   byebug
-  coffee-rails (~> 4.1.0)
+  coffee-rails!
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.15)
   puma
-  rails (= 4.2.5)
+  rack!
+  rails!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
+  sprockets-rails!
   turbolinks
   uglifier (>= 1.3.0)
-  web-console (~> 2.0)
+  web-console!
 
 BUNDLED WITH
    1.10.6
