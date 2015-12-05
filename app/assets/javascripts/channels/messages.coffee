@@ -1,8 +1,25 @@
 App.messages = App.cable.subscriptions.create 'MessagesChannel',
+  collection: -> $('#messages')
+
+  connected: ->
+    alert('connected')
+    setTimeout =>
+      @followCurrentMessage()
+      @installPageChangeCallback()
+    , 1000
+
   # received gets called whenever client receives something from websocket
   received: (data) ->
-    $('#messages').append @renderMessage(data)
+    alert("what")
+    @collection().append @renderMessage(data)
+
   renderMessage: (data) ->
     "<p><b>[#{data.username}]:</b> #{data.message}</p>"
-$('button').click ->
-  alert("yea");
+
+  followCurrentMessage: ->
+    @perform 'follow'
+
+  installPageChangeCallback: ->
+    unless @installedPageChangeCallback
+      @installedPageChangeCallback = true
+      $(document).on 'page:change', -> App.messages.followCurrentMessage()

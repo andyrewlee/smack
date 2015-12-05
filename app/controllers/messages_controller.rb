@@ -3,10 +3,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-    # broadcast to messages channel
-    ActionCable.server.broadcast 'messages',
-      message: params[:message][:body],
-      username: current_user.username
     head :ok
   end
 end
