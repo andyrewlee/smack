@@ -2,7 +2,6 @@ App.comments = App.cable.subscriptions.create "CommentsChannel",
   collection: -> $("[data-channel='comments']")
 
   connected: ->
-    alert("what")
     setTimeout =>
       @followCurrentMessage()
       @installPageChangeCallback()

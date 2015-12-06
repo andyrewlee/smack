@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to messages_path
+      redirect_to Message.first
     else
       render :new
     end

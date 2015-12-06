@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   resources :sessions, only: [:new, :create]
-  resources :messages, only: [:index, :create, :show] do
+  resources :messages, only: [:show] do
     resources :comments, only: [:create]
   end
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
 
   root 'sessions#new'
 end
