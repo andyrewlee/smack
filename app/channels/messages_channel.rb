@@ -1,7 +1,5 @@
 class MessagesChannel < ApplicationCable::Channel
-  # subscribed method called when client subscribes to channel
-  def subscribed
-    # starts streaming broadcasts to all users subscribed to messages
+  def follow
     stream_from 'messages'
   end
 end

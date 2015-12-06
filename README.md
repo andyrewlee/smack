@@ -13,7 +13,7 @@ one for Action Cable
 bundle exec puma -p 28080 cable/config.ru 
 ```
 
-and one for our Rails Application.
+and one for our Rails application.
 
 ```sh
 rails s
