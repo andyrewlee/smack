@@ -15,7 +15,10 @@ App.messages = App.cable.subscriptions.create 'MessagesChannel',
     "<p><b>[#{data.username}]:</b> #{data.message}</p>"
 
   followCurrentMessage: ->
-    @perform 'follow'
+    if @collection()
+      @perform 'follow'
+    else
+      @perform 'unfollow'
 
   installPageChangeCallback: ->
     unless @installedPageChangeCallback

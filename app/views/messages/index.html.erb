@@ -1,7 +1,11 @@
 <h1>Main Chat</h1>
 <p><%= current_user.username %></p>
 
-<div id="messages"></div>
+<div id="messages">
+  <% @messages.each do |m| %>
+    <%= link_to m.name, m %>
+  <% end %>
+</div>
 
 <%= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f| %>
   <%= f.label :body, 'Enter a message:'  %><br/>

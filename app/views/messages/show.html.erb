@@ -1,0 +1,8 @@
+<h1>Comments for <%= @message.name %></h1>
+
+<%= form_for [ @message, Comment.new ], remote: true do |form| %>
+  <%= form.text_area :comment, size: '100x5' %><br>
+  <%= form.submit 'Post comment' %>
+<% end %>
+
+<section id="comments" data-channel="comments" data-message-id="<%= @message.id %>">
