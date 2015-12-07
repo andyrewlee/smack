@@ -17,3 +17,9 @@
 .chat-input {
   border: 1px solid black;
 }
+
+.chat-footer {
+  position: fixed;
+  width: 55.88%;
+  bottom: 0;
+}
