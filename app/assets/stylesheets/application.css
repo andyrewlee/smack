@@ -23,3 +23,8 @@
   width: 55.88%;
   bottom: 0;
 }
+
+#comments {
+  height: 83vh;
+  overflow: auto;
+}

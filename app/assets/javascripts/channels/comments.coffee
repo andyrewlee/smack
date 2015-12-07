@@ -9,6 +9,8 @@ App.comments = App.cable.subscriptions.create "CommentsChannel",
 
   received: (data) ->
     @collection().append @renderMessage(data)
+    comments = $('#comments')
+    comments.scrollTop(comments.prop('scrollHeight'));
 
   userIsCurrentUser: (comment) ->
     $(comment).attr('data-user-id') is $('meta[name=current-user]').attr('id')
