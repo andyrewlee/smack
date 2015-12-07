@@ -9,7 +9,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav class="navbar navbar-fixed-top navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Smack</a>
+    <ul class="nav navbar-nav pull-right">
+      <li>
+        <a class="nav-link" href="#">Log out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <div class="container">
   <%= yield %>
 </div>

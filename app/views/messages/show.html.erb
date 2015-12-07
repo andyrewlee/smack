@@ -12,6 +12,9 @@
   <div id="right-bar" class="col-sm-9">
     <h1>#<%= @message.name %></h1>
     <section id="comments" data-channel="comments" data-message-id="<%= @message.id %>">
+      <% @message.comments.each do |c| %>
+        <p><b>[<%= c.user.username %>]</b> <%= c.comment %></p>
+      <% end %>
     </section>
 
     <div class="chat-footer">
@@ -21,7 +24,7 @@
             <%= form.text_field :comment, class: "form-control chat-input", autofocus: true %><br>
           </div>
           <div class="col-xs-2">
-            <%= form.submit 'Post comment' %>
+            <%= form.submit 'Send', class: "btn btn-primary" %>
           </div>
         </div>
       <% end %>
