@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-sm-3">
     <div id="channels">
+      <%= link_to "New Channel", new_message_path, class: "btn btn-success btn-sm" %>
       <% @messages.each do |m| %>
         <p><%= link_to "##{m.name}", m %></p>
       <% end %>
@@ -16,7 +17,6 @@
         <p><b>[<%= c.user.username %>]</b> <%= c.comment %></p>
       <% end %>
     </section>
-
     <div class="chat-footer">
       <%= form_for [ @message, Comment.new ], remote: true do |form| %>
         <div class="form-group row">
@@ -29,6 +29,5 @@
         </div>
       <% end %>
     </div>
-
   </div>
 </div>
